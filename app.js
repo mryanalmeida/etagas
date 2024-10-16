@@ -1,8 +1,17 @@
 /**
  * PWA - Flex
- * @author Professor José de Assis
- * @link https://joseassis.com.br/
+ * @author Marcos Almeida
+ * @link
  */
+
+//Registrar o ServiceWorker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('/sw.js')
+        .then(() => {
+            console.log("service worker registrado.")
+        })
+}
 
 function calcular() {
     // pegar valores dos inputs
